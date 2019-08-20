@@ -27,5 +27,13 @@
 
     <%= yield %>
 
+  <div class="digg_pagination">
+    <div class="page_info">
+      <%=page_entries_info @places %>
+    </div>
+    <%= will_paginate @places %>
+  </div>
+
+
   </body>
 </html>
