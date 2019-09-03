@@ -28,11 +28,15 @@ body {
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
-.navbar-inverse a.navbar-brand {
+.navbar-light a.navbar-brand {
   color: #32a0b8;
   font-family: 'cantarellbold', sans-serif;
   font-size: 26px;
   }
+
+.navbar-light .navbar-nav .nav-link{
+    color: #32a0b8;
+}
 
 .digg_pagination {
   background: white;
@@ -98,7 +102,3 @@ body {
   padding: 2px 8px 2px 8px;
 }
 
-input#user_remember_me {
-    margin-left: 0;
-    margin-top: 6px;
-}
