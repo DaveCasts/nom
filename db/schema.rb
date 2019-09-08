@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_002543) do
+ActiveRecord::Schema.define(version: 2019_09_08_040553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 2019_09_04_002543) do
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_comments_on_place_id"
     t.index ["user_id", "place_id"], name: "index_comments_on_user_id_and_place_id"
+  end
+
+  create_table "phoros", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.text "caption"
+    t.integer "place_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture"
   end
 
   create_table "places", force: :cascade do |t|

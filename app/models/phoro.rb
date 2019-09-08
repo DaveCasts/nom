@@ -1,0 +1,2 @@
+class Phoro < ApplicationRecord
+end

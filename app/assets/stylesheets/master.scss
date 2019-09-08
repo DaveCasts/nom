@@ -35,7 +35,11 @@ body {
   }
 
 .navbar-light .navbar-nav .nav-link{
-    color: #32a0b8;
+    color: #32a0b8 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white !important;
 }
 
 .digg_pagination {
