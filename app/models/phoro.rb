@@ -1,2 +1,0 @@
-class Phoro < ApplicationRecord
-end
