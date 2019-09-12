@@ -134,7 +134,7 @@
 <div class="row">
   <% @place.photos.each do |photo| %>
     <div class="img col-12 col-sm-6">
-        <% if photo.present? %>
+        
           <%= image_tag photo.picture.url, class: 'img-fluid' %>
           <blockquote>
             <%= photo.caption %>
@@ -142,7 +142,7 @@
               <small><%= photo.user.email %></small>
             </div>
           </blockquote>
-        <% end %>
+        
     </div>
   <% end %>
 </div>
