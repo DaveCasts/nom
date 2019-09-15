@@ -134,3 +134,16 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+img {
+  height: 300px;
+  length: 300px;
+}
+
+.btn {
+    border-color: #32a0b8 !important;
+}
+
+.btn:hover {
+  border-color: #000033 !important; 
+}
