@@ -147,3 +147,11 @@ img {
 .btn:hover {
   border-color: #000033 !important; 
 }
+
+.my-btns {
+  display: inline-flex;
+
+  div {
+    margin-right: 15px;
+  }
+}

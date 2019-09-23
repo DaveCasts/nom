@@ -35,26 +35,31 @@
 
   <br />
 
-  <div class="float-right">
-    <% if current_user && current_user == @place.user %>
+  <div class="my-btns">
+
+  <div>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
         Add a photo
       </button>
   </div>
 
-  <div class="float-left">
-      <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  <div>
+      <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#myModal">
       Add a comment
       </button>
   </div>
-
-<div class="clear"></div>
-
-    <div class="float-right">
-      <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-      <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
+      
+      <% if current_user && current_user == @place.user %>
+      <div>
+        <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+      </div>
+      <div>
+        <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
+        </div>
       <% end %>
-    </div>
+    
+</div>
+
 </div>
 
 <div class="clear"></div>
@@ -94,11 +99,13 @@
   <% @place.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
       <blockquote>
+        <p>
         <% if comment.humanized_rating.present? %>
-          <b><%= comment.rating %></b> -
+          <b><%= comment.humanized_rating %></b> -
         <% end %>
         <%= comment.message %>
         <small><%= comment.user.email %></small>
+      </p>
       </blockquote>
     </div>
   <% end %>
