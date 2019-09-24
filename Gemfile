@@ -77,7 +77,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'font-awesome-rails'
 
-gem 'devise'
+gem 'devise', ">= 4.7.1"
 
 gem 'geocoder'
 
