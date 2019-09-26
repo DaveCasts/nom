@@ -9,8 +9,4 @@ class NotificationMailer < ApplicationMailer
       from: "no-reply@nomsterapp.com",
       subject: "A comment has been added to #{@place.name}")
   end
-
-  def forgotten_password
-    
-  end
 end
